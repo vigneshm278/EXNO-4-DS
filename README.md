@@ -24,6 +24,39 @@ The feature selection techniques used are:
 3.Embedded Method
 
 # CODING AND OUTPUT:
-       # INCLUDE YOUR CODING AND OUTPUT SCREENSHOTS HERE
+
+```
+import pandas as pd
+import numpy as np
+import seaborn as sns
+
+from sklearn.model_selection import train_test_split
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.metrics import accuracy_score, confusion_matrix
+
+v=pd.read_csv("/content/income(1) (1).csv",na_values=[ " ?"])
+v
+```
+<img width="893" height="376" alt="image" src="https://github.com/user-attachments/assets/a49b776c-6353-4e73-924d-728a3f01c251" />
+
+```
+v.isnull().sum()
+```
+<img width="472" height="317" alt="image" src="https://github.com/user-attachments/assets/3168a23d-464a-4255-9cbb-ede0770e4838" />
+
+```
+missing=v[v.isnull().any(axis=1)]
+missing
+```
+<img width="801" height="301" alt="image" src="https://github.com/user-attachments/assets/508e82b9-bc33-42b0-b6a1-f938fca17e0f" />
+
+```
+v2=v.dropna(axis=0)
+v2
+```
+<img width="844" height="411" alt="image" src="https://github.com/user-attachments/assets/2718c5fb-48ec-4f74-9f14-fb7a723d6693" />
+
+
+
 # RESULT:
        # INCLUDE YOUR RESULT HERE
